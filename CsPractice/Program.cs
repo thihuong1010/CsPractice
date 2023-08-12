@@ -53,19 +53,33 @@ namespace CsPractice
     //}
 
     // C# multi-level inheritance
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        C c = new C();
+    //        c.Name = "Huong Nguyen";
+    //        c.Location = "Finland";
+    //        c.Age = 23;
+    //        c.GetName();
+    //        c.GetLocation();
+    //        c.GetAge();
+
+    //        Console.WriteLine("\nPress Any Key to Exit..");
+    //        Console.ReadLine();
+    //    }
+    //}
+
+    // C# compile time polymorphism example
     class Program
     {
         static void Main(string[] args)
         {
-            C c = new C();
-            c.Name = "Huong Nguyen";
-            c.Location = "Finland";
-            c.Age = 23;
-            c.GetName();
-            c.GetLocation();
-            c.GetAge();
+            Calculate c = new Calculate();
+            c.AddNumbers(1, 2);
+            c.AddNumbers(1, 2, 3);
 
-            Console.WriteLine("\nPress Any Key to Exit..");
+            Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
     }
