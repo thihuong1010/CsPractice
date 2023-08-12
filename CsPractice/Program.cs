@@ -35,17 +35,35 @@ namespace CsPractice
     //}
 
     // C# inheritance
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Detail d = new Detail();
+    //        d.Name = "Huong Nguyen";
+    //        // Compile time error because Location is private
+    //        // d.Location = "Finland";
+    //        d.Age = 23;
+    //        d.GetUserInfo("Finland");
+    //        d.GetAge();
+
+    //        Console.WriteLine("\nPress Any Key to Exit..");
+    //        Console.ReadLine();
+    //    }
+    //}
+
+    // C# multi-level inheritance
     class Program
     {
         static void Main(string[] args)
         {
-            Detail d = new Detail();
-            d.Name = "Huong Nguyen";
-            // Compile time error because Location is private
-            // d.Location = "Finland";
-            d.Age = 23;
-            d.GetUserInfo("Finland");
-            d.GetAge();
+            C c = new C();
+            c.Name = "Huong Nguyen";
+            c.Location = "Finland";
+            c.Age = 23;
+            c.GetName();
+            c.GetLocation();
+            c.GetAge();
 
             Console.WriteLine("\nPress Any Key to Exit..");
             Console.ReadLine();
