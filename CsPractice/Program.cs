@@ -71,13 +71,28 @@ namespace CsPractice
     //}
 
     // C# compile time polymorphism example
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Calculate c = new Calculate();
+    //        c.AddNumbers(1, 2);
+    //        c.AddNumbers(1, 2, 3);
+
+    //        Console.WriteLine("\nPress Enter Key to Exit..");
+    //        Console.ReadLine();
+    //    }
+    //}
+
+    // C# rum time polymorphism
     class Program
     {
         static void Main(string[] args)
         {
-            Calculate c = new Calculate();
-            c.AddNumbers(1, 2);
-            c.AddNumbers(1, 2, 3);
+            DClass d = new DClass();
+            d.GetInfo();
+            BClass b = new BClass();
+            b.GetInfo();
 
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
