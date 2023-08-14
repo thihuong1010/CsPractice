@@ -85,15 +85,30 @@ namespace CsPractice
     //}
 
     // C# rum time polymorphism
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        DClass d = new DClass();
+    //        d.GetInfo();
+    //        BClass b = new BClass();
+    //        b.GetInfo();
+
+    //        Console.WriteLine("\nPress Enter Key to Exit..");
+    //        Console.ReadLine();
+    //    }
+    //}
+
     class Program
     {
         static void Main(string[] args)
         {
-            DClass d = new DClass();
+            DeridedClass d = new DeridedClass();
             d.GetInfo();
-            BClass b = new BClass();
+            BaseClass b = new BaseClass();
             b.GetInfo();
-
+            d.Name = string.Empty;
+            Console.WriteLine(d.Name);
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
