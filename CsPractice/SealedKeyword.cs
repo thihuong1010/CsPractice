@@ -1,25 +1,41 @@
 ﻿using System;
 namespace CsPractice
 {
-	// Base class
-	sealed class Users
-	{
-        public string name = "Huong nguyen";
-        public string location = "Finland";
-        public void GetInfo()
+    public class First
+    {
+        public virtual void GetInfo()
         {
-            Console.WriteLine("Name: {0}", name);
-            Console.WriteLine("Location: {0}", location);
+            Console.WriteLine("Base class First method");
+        }
+        public virtual void Test()
+        {
+            Console.WriteLine("Base class First Test Method");
         }
     }
 
-    // Derived class
-    public class Details : Users
+    public class Second : First
     {
-        public int age = 23;
-        public void GetAge()
+        public sealed override void GetInfo()
         {
-            Console.WriteLine("Age: {0}", age);
+            Console.WriteLine("Derived class Second method");
+        }
+        public override void Test()
+        {
+            Console.WriteLine("Derived class Second Test Method");
+        }
+    }
+
+    public class Third : Second
+    {
+        // Compile time error
+        public override void GetInfo()
+        {
+            Console.WriteLine("");
+        }
+
+        public override void Test()
+        {
+            Console.WriteLine("Derived Class C Test Method");
         }
     }
 }

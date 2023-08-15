@@ -103,9 +103,10 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            Details d = new Details();
-            d.GetAge();
-            d.GetInfo();
+            Third rd = new Third();
+            rd.GetInfo();
+            rd.Test();
+
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
