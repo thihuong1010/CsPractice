@@ -103,12 +103,9 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            DeridedClass d = new DeridedClass();
+            Details d = new Details();
+            d.GetAge();
             d.GetInfo();
-            BaseClass b = new BaseClass();
-            b.GetInfo();
-            d.Name = string.Empty;
-            Console.WriteLine(d.Name);
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
