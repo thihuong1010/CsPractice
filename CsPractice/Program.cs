@@ -103,11 +103,9 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            Third rd = new Third();
-            rd.GetInfo();
-            rd.Test();
-
-            Console.WriteLine("\nPress Enter Key to Exit..");
+            UserDClass u = new UserDClass();
+            Console.WriteLine("****Abstract Class Example****");
+            u.GetDetails("Huong Nguyen", "Finland", 23);
             Console.ReadLine();
         }
     }

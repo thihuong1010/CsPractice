@@ -28,10 +28,10 @@ namespace CsPractice
     public class Third : Second
     {
         // Compile time error
-        public override void GetInfo()
-        {
-            Console.WriteLine("");
-        }
+        //public override void GetInfo()
+        //{
+        //    Console.WriteLine("");
+        //}
 
         public override void Test()
         {
