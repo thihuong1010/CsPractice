@@ -103,9 +103,9 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            UserDClass u = new UserDClass();
-            Console.WriteLine("***Abstract Class Example***");
-            u.GetDetails("Huong Nguyen", "Finland");
+            Derived d = new Derived();
+            d.GetInfoMethod();
+            Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
     }
