@@ -103,15 +103,11 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            // Declare object with new keyword
-            User2 u = new User2("Finland", 23);
-            // Declare object without new keyword
-            User2 u1;
-            Console.WriteLine("Name: {0}, Location: {1}, Age: {2}", User2.name, u.location, u.age);
-            // Initialize Fields
-            u1.location = "Turku";
-            u1.age = 23;
-            Console.WriteLine("Name: {0}, Location: {1}, Age: {2}", User2.name, u1.location, u1.age);
+            IUser u = new UserClass1();
+            u.GetDetails("Huong");
+            IUser u1 = new UserClass2();
+            u1.GetDetails("Finland");
+
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
