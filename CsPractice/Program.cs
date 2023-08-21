@@ -103,11 +103,10 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            IUser u = new UserClass1();
-            u.GetDetails("Huong");
-            IUser u1 = new UserClass2();
-            u1.GetDetails("Finland");
-
+            UserMultipleInheritance u = new UserMultipleInheritance();
+            u.GetName("Huong");
+            u.GetLocation("Finland");
+            u.GetAge(23);
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }
