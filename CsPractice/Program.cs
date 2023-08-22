@@ -103,10 +103,12 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            UserMultipleInheritance u = new UserMultipleInheritance();
-            u.GetName("Huong");
-            u.GetLocation("Finland");
-            u.GetAge(23);
+            User u = new User();
+            // This will throw compile time error
+            // u.name = "Tii";
+            Console.WriteLine("Name: {0}", u.name);
+            Console.WriteLine("Location: {0}", u.location);
+            Console.WriteLine("Age: {0}", u.age);
             Console.WriteLine("\nPress Enter Key to Exit..");
             Console.ReadLine();
         }

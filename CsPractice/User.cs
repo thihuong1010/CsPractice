@@ -1,32 +1,16 @@
 ﻿using System;
 namespace CsPractice
 {
-	public class User
+	class User
 	{
-		private string? location;
-		private string? name;
-
-		public string Location
+		// Initialize read only field
+		public readonly string name = "Huong Nguyen";
+		public readonly string location;
+		public readonly int age;
+		public User()
 		{
-			get
-			{
-				return location;
-			}
-			set
-			{
-				location = value;
-			}
-		}
-		public string Name
-		{
-			get
-			{
-				return name;
-			}
-			set
-			{
-				name = value;
-			}
+			location = "Finland";
+			age = 23;
 		}
 	}
 }
