@@ -103,13 +103,14 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            User u = new User();
-            // This will throw compile time error
-            // u.name = "Tii";
-            Console.WriteLine("Name: {0}", u.name);
-            Console.WriteLine("Location: {0}", u.location);
-            Console.WriteLine("Age: {0}", u.age);
-            Console.WriteLine("\nPress Enter Key to Exit..");
+            Console.WriteLine("*****Delegate example*****");
+            MathOperations m = new MathOperations();
+            // Instantiate delegate with the add method
+            SampleDelegate dlgt = m.Add;
+            dlgt(2, 3);
+            // Instantiate delegate with the subtract method
+            dlgt = m.Subtract;
+            dlgt(5, 3);
             Console.ReadLine();
         }
     }
