@@ -107,10 +107,9 @@ namespace CsPractice
             MathOperations m = new MathOperations();
             // Instantiate delegate with the add method
             SampleDelegate dlgt = m.Add;
-            dlgt(2, 3);
-            // Instantiate delegate with the subtract method
-            dlgt = m.Subtract;
-            dlgt(5, 3);
+            dlgt += m.Subtract;
+            dlgt += m.Multiply;
+            dlgt(10, 90);
             Console.ReadLine();
         }
     }
