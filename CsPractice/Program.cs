@@ -106,11 +106,14 @@ namespace CsPractice
             Console.WriteLine("*****Delegate example*****");
             MathOperations m = new MathOperations();
             // Instantiate delegate with the add method
-            SampleDelegate dlgt = m.Add;
-            dlgt += m.Subtract;
-            dlgt += m.Multiply;
-            dlgt(10, 90);
+            SampleMethod(m.Add, 10, 90);
+            SampleMethod(m.Subtract, 10, 90);
+            SampleMethod(m.Multiply, 10, 90);
             Console.ReadLine();
+        }
+        static void SampleMethod(SampleDelegate dlgt, int a, int b)
+        {
+            dlgt(a, b);
         }
     }
 }
