@@ -103,17 +103,11 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("*****Delegate example*****");
-            MathOperations m = new MathOperations();
-            // Instantiate delegate with the add method
-            SampleMethod(m.Add, 10, 90);
-            SampleMethod(m.Subtract, 10, 90);
-            SampleMethod(m.Multiply, 10, 90);
+            Console.WriteLine("****Events Example****");
+            Operations op = new Operations(10, 20);
+            op.AddOperation();
+            op.SubOperation();
             Console.ReadLine();
-        }
-        static void SampleMethod(SampleDelegate dlgt, int a, int b)
-        {
-            dlgt(a, b);
         }
     }
 }
