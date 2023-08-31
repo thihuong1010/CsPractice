@@ -1,66 +1,19 @@
 ﻿using System;
 namespace CsPractice
 {
-    class Maths
+    public delegate string MyDel(string str);
+
+    class EventProgram
     {
-        // Declare the delegate
-        public delegate void SampleDelegate();
-        //Declare an event
-        public event SampleDelegate SampleEvent;
-        public void Add(int a, int b)
+        event MyDel MyEvent;
+
+        public EventProgram()
         {
-            // Calling event delegate to check subscription
-            if (SampleEvent != null)
-            {
-                // Raise the event by using () operator
-                SampleEvent();
-                Console.WriteLine("Add Result: {0}", a + b);
-            }
-            else
-            {
-                Console.WriteLine("Not Subscribed to Event");
-            }
+            this.MyEvent += new MyDel(this.WelcomeUser);
         }
-        public void Subtract(int x, int y)
+        public string WelcomeUser(string username)
         {
-            // Calling event delegate to check the subscription
-            if (SampleEvent != null)
-            {
-                // Raise the event by using () operator
-                SampleEvent();
-                Console.WriteLine("Subtract Result: {0}", x - y);
-            }
-            else
-            {
-                Console.WriteLine("Not Subscribed to Event");
-            }
-        }
-    }
-    class Operations
-    {
-        Maths m;
-        public int a { get; set; }
-        public int b { get; set; }
-        public Operations(int x, int y)
-        {
-            m = new Maths();
-            // Subscribe to SampleEvent event
-            m.SampleEvent += SampleEventHandler;
-            a = x;
-            b = y;
-        }
-        // SampleEvent Handler
-        public void SampleEventHandler()
-        {
-            Console.WriteLine("SampleEvent Handler: Calling Method");
-        }
-        public void AddOperation()
-        {
-            m.Add(a, b);
-        }
-        public void SubOperation()
-        {
-            m.Subtract(a, b);
+            return "Welcome " + username;
         }
     }
 }

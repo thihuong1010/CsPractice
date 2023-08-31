@@ -103,11 +103,9 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("****Events Example****");
-            Operations op = new Operations(10, 20);
-            op.AddOperation();
-            op.SubOperation();
-            Console.ReadLine();
+            EventProgram obj1 = new EventProgram();
+            string result = obj1.MyEvent("Tutorials Point");
+            Console.WriteLine(result);
         }
     }
 }
