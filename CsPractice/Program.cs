@@ -103,9 +103,10 @@ namespace CsPractice
     {
         static void Main(string[] args)
         {
-            EventProgram obj1 = new EventProgram();
-            string result = obj1.MyEvent("Tutorials Point");
-            Console.WriteLine(result);
+            Calculate c = new Calculate();
+            int num1 = 15; // Pass value type by value
+            int num2 = 16; // Pass value type by value
+            c.AddNumbers(num1, num2);
         }
     }
 }
